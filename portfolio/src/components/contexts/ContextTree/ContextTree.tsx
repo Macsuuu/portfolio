@@ -1,8 +1,9 @@
 import React from "react";
 
-const ContextTree = () => {
+const ContextTree: React.FC<any> = ({children}) => {
     return (
         <>
+            {children}
         </>
     )
 }
