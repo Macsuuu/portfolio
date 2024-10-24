@@ -3,6 +3,7 @@ import './MainSection.css';
 import BigButton from "./BigButton";
 import IconLink from "./IconLink";
 import { motion } from 'framer-motion';
+import Photo from "./Photo";
 
 const MainSection = ()=>{
 
@@ -37,10 +38,12 @@ const MainSection = ()=>{
                             }}
                 >
 
+                    <Photo/>
+
                     <BigButton />
 
                     <div className="icons">
-                        <IconLink url={"test"} iconName={"bxl-github"} />
+                        <IconLink url={"https://github.com/Macsuuu"} iconName={"bxl-github"} />
                         <IconLink url={"test"} iconName={"bxl-linkedin"} />
                         <IconLink url={"test"} iconName={"bxl-instagram"} />
                     </div>

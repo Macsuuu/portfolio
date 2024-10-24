@@ -1,0 +1,39 @@
+
+.body{
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    background: #FCFCFC;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tabs{
+  width: 60%;
+}
+
+.tabsHeader{
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: white;
+}
+
+.tabLabel{
+    position: relative;
+    padding: 20px;
+    width: 50%;
+    cursor: pointer;
+    transition: .3s ease-in-out color;
+}
+
+.tabIndicator{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #2E5CD1;
+    width: 50%;
+    height: 100%;
+}

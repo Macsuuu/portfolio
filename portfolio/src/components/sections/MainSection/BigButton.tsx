@@ -1,6 +1,9 @@
 import {animate, easeInOut, motion, useMotionValue, useTransform} from "framer-motion";
 import {useState} from "react";
+import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
+gsap.registerPlugin(ScrollToPlugin);
 
 const BigButton = () => {
 
@@ -36,7 +39,21 @@ const BigButton = () => {
     }
 
     const handleClick = () => {
+        const tabsElement = document.querySelector('.tabs');
 
+        if (tabsElement) {
+            // Obliczamy pozycję końca animacji
+            const endPosition = tabsElement.getBoundingClientRect().top + window.scrollY + tabsElement.scrollHeight;
+
+            // Używamy GSAP do przewinięcia
+            gsap.to(window, {
+                scrollTo: {
+                    y: endPosition,
+                    autoKill: false, // Umożliwia kontynuowanie przewijania, nawet gdy użytkownik przewija ręcznie
+                },
+                duration: 1,
+            });
+        }
     }
 
     return (
