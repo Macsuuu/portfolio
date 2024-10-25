@@ -11,7 +11,6 @@ function App() {
 
           <MainSection />
           <AboutMe/>
-          <MainSection />
 
       </ContextTree>
     </div>

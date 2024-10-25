@@ -3,6 +3,7 @@ import "./AboutMe.css";
 import {useEffect, useRef, useState} from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import Experience from "./Experience";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -32,13 +33,12 @@ const AboutMe = () => {
     useEffect(() => {
         if(hasRun){
             gsap.fromTo('.tabs',
-                {x: -3000},
+                {x: -2000},
                 {
                     scrollTrigger:{
-                        trigger: '.aboutme',
-                        start: 'top top',
-                        end: 'center',
-                        pin: true,
+                        trigger: '.main',
+                        start: 'center',
+                        end: 'bottom',
                         scrub: true,
                         pinnedContainer: '.aboutme',
                     },
@@ -109,7 +109,7 @@ const AboutMe = () => {
                 <div className="tabsContainer">
 
                     <div className="tab experience">
-
+                        <Experience />
                     </div>
 
                     <div className="tab education">

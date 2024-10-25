@@ -8,7 +8,7 @@ import Photo from "./Photo";
 const MainSection = ()=>{
 
     return (
-        <div className="body">
+        <div className="body main">
 
             <div className="flexContainer">
 
@@ -24,7 +24,7 @@ const MainSection = ()=>{
                     <h1>Witaj</h1>
                     <h2>Mam na imię Maciej, mam 20 lat i jestem Fronend Developerem.</h2>
                     <p>
-                        Programowaniem zajmuję się od 16 roku życia. Zaczynałem od tworzenia prostych gier koputerowych, aktualnie projektuje i pisze interfesy użytkownika.
+                        Programowaniem zajmuję się od 16 roku życia. Zaczynałem od tworzenia prostych gier komputerowych, aktualnie projektuje oraz wytwarzam interfesy użytkownika.
                         Od dwóch lat zawodowo pracuję jako programista. Prosto i schludnie... tak wyglądają moje projekty.
                     </p>
                 </motion.div>
