@@ -15,7 +15,7 @@ const AboutMe = () => {
 
     const handleClick = (tab: number) => {
         setCurrentTab(tab);
-        animate(value, 100 * tab, {duration: 0.3})
+        animate(value, 100 * tab, {duration: 0.5})
     }
 
     const header = useRef<HTMLDivElement>({} as HTMLDivElement);
@@ -24,7 +24,7 @@ const AboutMe = () => {
 
     const value = useMotionValue(0);
     const input = [0, 100];
-    const output = [0, -(headerWidth.current * 2)];
+    const output = [0, -(headerWidth.current * 1)];
     const x = useTransform(value, input, output);
 
     useEffect(()=>{
@@ -122,9 +122,7 @@ const AboutMe = () => {
                             <Experience/>
                         </div>
 
-                        <div className="tab">
 
-                        </div>
 
                         <div className="tab education">
                             <Education />
