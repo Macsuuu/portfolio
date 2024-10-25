@@ -38,16 +38,60 @@
     height: 100%;
 }
 
+.tab{
+    background: white;
+    width: 100%;
+}
+
+.tabsDisplay{
+    overflow: hidden;
+}
+
+.tabsContainer{
+    display: flex;
+    width: 300%;
+}
+
 /*
 Experience
 */
 
 .ExperienceTileTitle{
     color: #1c1c1c;
+    margin: 0;
+    font-size: 20px;
+}
+
+.ExperienceTileDate{
+    color: #1c1c1c;
+    margin: 0;
+    font-size: 14px;
 }
 
 .ExperienceTileHeader{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.ExperienceTileSubHeader > h4{
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.ExperienceTileContent > p {
+    color: #585858;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.ExperienceTile{
+    padding: 40px;
+}
+
+.ExperienceTileContent > ul >li{
+    padding: 3px 0;
+    font-size: 14px;
 }

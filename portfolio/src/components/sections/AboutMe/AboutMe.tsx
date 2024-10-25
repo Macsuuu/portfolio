@@ -1,9 +1,10 @@
-import {motion, useMotionValue, useTransform} from "framer-motion";
+import {animate, motion, useMotionValue, useTransform} from "framer-motion";
 import "./AboutMe.css";
 import {useEffect, useRef, useState} from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Experience from "./Experience";
+import Education from "./Education";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,14 +12,20 @@ const AboutMe = () => {
 
     const [currentTab, setCurrentTab] = useState(0);
 
+
     const handleClick = (tab: number) => {
         setCurrentTab(tab);
+        animate(value, 100 * tab, {duration: 0.3})
     }
 
     const header = useRef<HTMLDivElement>({} as HTMLDivElement);
 
     const headerWidth = useRef(0);
 
+    const value = useMotionValue(0);
+    const input = [0, 100];
+    const output = [0, -(headerWidth.current * 2)];
+    const x = useTransform(value, input, output);
 
     useEffect(()=>{
         headerWidth.current = header.current.offsetWidth;
@@ -106,15 +113,23 @@ const AboutMe = () => {
                     </motion.div>
                 </div>
 
-                <div className="tabsContainer">
+                <div className="tabsDisplay">
 
-                    <div className="tab experience">
-                        <Experience />
-                    </div>
+                    <motion.div className="tabsContainer"
+                                style={{x}}
+                    >
+                        <div className="tab experience">
+                            <Experience/>
+                        </div>
 
-                    <div className="tab education">
+                        <div className="tab">
 
-                    </div>
+                        </div>
+
+                        <div className="tab education">
+                            <Education />
+                        </div>
+                    </motion.div>
 
                 </div>
             </div>
