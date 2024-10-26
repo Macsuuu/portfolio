@@ -11,6 +11,10 @@
 
 .tabs{
   width: 60%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: rgb(255,255,255);
+    background: linear-gradient(331deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 66%, rgba(240,240,240,1) 100%);
+
 }
 
 .tabsHeader{
@@ -39,7 +43,6 @@
 }
 
 .tab{
-    background: white;
     width: 100%;
 }
 
@@ -49,7 +52,7 @@
 
 .tabsContainer{
     display: flex;
-    width: 200%;
+    width: 300%;
 }
 
 /*
@@ -88,10 +91,38 @@ Experience
 }
 
 .ExperienceTile{
-    padding: 40px;
+    margin: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+.ExperienceTile:last-child{
+    border: none;
+    padding-bottom: 0;
+}
+
 
 .ExperienceTileContent > ul >li{
     padding: 3px 0;
     font-size: 14px;
+}
+
+.lower{
+    display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+    .tabs{
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .ExperienceTileHeader{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .lower{
+        display: flex;
+    }
 }

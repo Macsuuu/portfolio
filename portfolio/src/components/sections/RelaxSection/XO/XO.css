@@ -1,0 +1,120 @@
+.board{
+    padding: 20px;
+    border-radius: 10px;
+    background: #e5e5e5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.xo{
+    max-width: 450px;
+}
+
+.slot{
+    width: 50px;
+    height: 50px;
+    background: #2d2d2d;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.leftPane{
+    max-height: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftPane > h4{
+    font-size: 12px;
+    margin: 0;
+    color: #585858;
+    font-weight: 400;
+}
+
+.historyContainer{
+    overflow-y: scroll;
+    flex: 1;
+}
+
+.historyContainer::-webkit-scrollbar{
+    display: none;
+}
+
+.gameButtons{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.gameButton{
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 30px;
+    background: #2E5CD1;
+    color: white;
+    transition: 0.3s;
+    margin: 6px 0;
+}
+
+.gameButton:hover{
+    background: #11275e;
+}
+
+
+.historyElement{
+    margin: 5px 0;
+    padding: 6px;
+    background: #e5e5e5;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.selected{
+    background: #2E5CD1;
+    color: white;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.xoHeader{
+    text-align: center;
+    color: #1c1c1c;
+}
+
+.red{
+    color: #ec3b27;
+}
+
+.blue{
+    color: #3a5bf3;
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .gameButtons{
+        justify-content: center;
+    }
+
+    .xo{
+        max-width: 90%;
+    }
+
+}

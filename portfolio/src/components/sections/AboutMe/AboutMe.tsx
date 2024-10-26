@@ -24,7 +24,7 @@ const AboutMe = () => {
 
     const value = useMotionValue(0);
     const input = [0, 100];
-    const output = [0, -(headerWidth.current * 1)];
+    const output = [0, -(headerWidth.current * 2)];
     const x = useTransform(value, input, output);
 
     useEffect(()=>{
@@ -122,13 +122,69 @@ const AboutMe = () => {
                             <Experience/>
                         </div>
 
+                        <div className="tab">
 
+                        </div>
 
                         <div className="tab education">
                             <Education />
                         </div>
                     </motion.div>
 
+                </div>
+
+                <div className="tabsHeader lower">
+
+
+                    {
+                        headerWidth && (
+                            <motion.div className="tabIndicator"
+                                        layout
+                                        initial={{
+                                            left: 0
+                                        }}
+                                        animate={{
+                                            left: (headerWidth.current / 2) * currentTab,
+                                        }}
+                                        transition={{
+                                            type: "spring",
+                                            duration: 0.5,
+                                        }}
+                            >
+
+                            </motion.div>
+                        )
+                    }
+
+
+                    <motion.div className={"tabLabel"}
+                                onClick={() => {
+                                    handleClick(0)
+                                }}
+                                style={{
+                                    color: currentTab == 0 ? "white" : "#1c1c1c"
+                                }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 0.3,
+                                }}
+
+                    >
+                        Doświadczenie zawodowe
+                    </motion.div>
+                    <motion.div className={"tabLabel"}
+                                onClick={() => {
+                                    handleClick(1)}}
+                                style={{
+                                    color: currentTab == 1 ? "white" : "#1c1c1c"
+                                }}
+                                transition={{
+                                    type: "spring",
+                                    duration: 0.3,
+                                }}
+                    >
+                        Wykształcenie
+                    </motion.div>
                 </div>
             </div>
 

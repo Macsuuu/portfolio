@@ -39,11 +39,11 @@ const BigButton = () => {
     }
 
     const handleClick = () => {
-        const tabsElement = document.querySelector('.tabs');
+        const tabsElement = document.querySelector('.aboutme');
 
         if (tabsElement) {
             // Obliczamy pozycję końca animacji
-            const endPosition = tabsElement.getBoundingClientRect().top + window.scrollY + tabsElement.scrollHeight;
+            const endPosition = tabsElement.getBoundingClientRect().top;
 
             // Używamy GSAP do przewinięcia
             gsap.to(window, {

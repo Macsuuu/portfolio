@@ -1,11 +1,12 @@
-import ExperienceTile from "./ExperienceTile";
+import React from "react";
+import ExpTile from "./ExpTile";
 
 const Experience = () => {
 
     return (
         <div>
-            <ExperienceTile title={"Sąd Apelacyjny w Warszawie"}
-                            description={"Odpowiedzialny za kompleksowy rozwój aplikacji webowych, obejmujący zarówno frontend, jak i backend. Samodzielnie realizuję pełen cykl wytwarzania oprogramowania – od analizy wymagań, przez projektowanie, implementację, po wdrożenie i utrzymanie systemów. Główne zadania obejmują:"}
+            <ExpTile title={"Sąd Apelacyjny w Warszawie"}
+                            description={"Jestem odpowiedzialny za kompleksowy rozwój aplikacji webowych, obejmujący zarówno frontend, jak i backend. Samodzielnie realizuję pełen cykl wytwarzania oprogramowania – od analizy wymagań, przez projektowanie, implementację, po wdrożenie i utrzymanie systemów. Główne zadania obejmują:"}
                             from={new Date("2023-07-10")}
                             to={new Date()}
                             position={"Programista"}
@@ -17,8 +18,8 @@ const Experience = () => {
                             ]}
             />
 
-            <ExperienceTile title={"Sąd Rejonowy dla m.St. Warszawy"}
-                            description={"Odpowiedzialny za kompleksowy rozwój aplikacji webowych, obejmujący zarówno frontend, jak i backend. Samodzielnie realizuję pełen cykl wytwarzania oprogramowania – od analizy wymagań, przez projektowanie, implementację, po wdrożenie i utrzymanie systemów. Główne zadania obejmują:"}
+            <ExpTile title={"Sąd Rejonowy dla m.St. Warszawy"}
+                            description={"Byłem odpowiedzialny za kompleksowy rozwój aplikacji webowych, obejmujący zarówno frontend, jak i backend. Samodzielnie realizowałem pełen cykl wytwarzania oprogramowania – od analizy wymagań, przez projektowanie, implementację, po wdrożenie i utrzymanie systemów. Główne zadania obejmowały:"}
                             from={new Date("2022-11-2")}
                             to={new Date("2023-04-01")}
                             position={"Programista"}

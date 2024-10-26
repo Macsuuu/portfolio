@@ -1,10 +1,11 @@
-import ExperienceTile from "./ExperienceTile";
+import React from "react";
+import ExpTile from "./ExpTile";
 
 const Education = () => {
 
     return (
         <div>
-            <ExperienceTile title={"Polsko-Japońska Akademia Technik Komputerowyh"}
+            <ExpTile title={"Polsko-Japońska Akademia Technik Komputerowyh"}
                             description={"Studia na kierunku Zarządzanie Informacją pozwolą mi zdobyć kompleksową wiedzę z zakresu analizy, przetwarzania oraz optymalizacji przepływu informacji w środowisku cyfrowym. Program studiów obejmuje zarówno aspekty techniczne, jak i zarządcze, co pozwoli mi rozwinąć umiejętności w zakresie:"}
                             from={new Date("2023-10-01")}
                             to={new Date()}
@@ -18,7 +19,7 @@ const Education = () => {
                             ]}
             />
 
-            <ExperienceTile title={"Zespół Szkół Łączności w Warszawie"}
+            <ExpTile title={"Zespół Szkół Łączności w Warszawie"}
                             description={"W czasie nauki w Technikum Informatycznym zdobyłem solidne podstawy teoretyczne i praktyczne z zakresu informatyki, w szczególności w obszarze programowania, administracji sieciami oraz zarządzania sprzętem komputerowym. Do kluczowych umiejętności wyniesionych z tego okresu należą:"}
                             from={new Date("2019-09-01")}
                             to={new Date("2023-04-28")}
